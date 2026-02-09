@@ -61,8 +61,8 @@ Options:
   --force                 Overwrite existing files
   --no-disable-builtins    Do not write .opencode/opencode.json to disable build/plan
   --source <path>         Explicit path to agent-constitution source repo
-  --global               Install globally to user config directory
-  --project              Install to project directory (default)
+  --global               Install globally to user config directory (default)
+  --project              Install to project directory
   -h, --help              Show help
 
 Env:
@@ -501,13 +501,19 @@ function askInstallationMode() {
   });
 
   return new Promise((resolve) => {
-    rl.question("Choose installation mode:\n  1) Project-level (.opencode/vendor/agent-constitution/)\n  2) Global (~/.config/opencode/agent-constitution/ or %APPDATA%\\opencode\\agent-constitution\\)\n  Enter choice [1-2]: ", (answer) => {
+    console.log("🔧 Installation mode selection:");
+    console.log("  1) Project-level (.opencode/vendor/agent-constitution/)");
+    console.log("  2) Global (~/.config/opencode/agent-constitution/ or %APPDATA%\\opencode\\agent-constitution\\) (Recommended)");
+    
+    rl.question("  Enter choice [1-2] (default: 2): ", (answer) => {
       rl.close();
       const choice = answer.trim();
-      if (choice === "2") {
-        resolve(true); // global
+      if (choice === "1") {
+        console.log("📁 Selected: Project-level installation");
+        resolve(false); // project
       } else {
-        resolve(false); // project (default)
+        console.log("🌍 Selected: Global installation (recommended)");
+        resolve(true); // global (default)
       }
     });
   });
@@ -564,8 +570,13 @@ Then run this script again.
 
   // Determine installation mode early to use in findSource
   let useGlobal = args.global;
+  
+  // 如果明确指定了--global或--project，使用指定值
+  // 如果都没有指定，默认使用全局安装
   if (useGlobal === null) {
-    useGlobal = await askInstallationMode();
+    console.log("🔧 Defaulting to global installation (shared across all projects)");
+    console.log("   Use --project for project-level installation");
+    useGlobal = true;
   }
 
   const src = findSource(projectRoot, args.source, useGlobal);
