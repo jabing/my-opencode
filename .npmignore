@@ -1,0 +1,51 @@
+# Development and test files
+test-*
+*.test.js
+*.spec.js
+
+# Documentation files (except README)
+*.md
+!README.md
+
+# GitHub-specific files
+.github/
+.gitignore
+
+# Build artifacts
+dist/
+build/
+*.log
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Offline packages (too large for npm)
+offline-packages/
+
+# Scripts not needed for npm package
+init-git.sh
+final-verification.sh
+test-install.sh
+
+# Project status files
+FINAL_STATUS.md
+PROJECT_SUMMARY.md
+INITIAL_SETUP.md
+verify-installation.md
+CHANGELOG.md
+CONTRIBUTING.md
+AGENTS.md
