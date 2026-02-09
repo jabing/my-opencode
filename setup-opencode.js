@@ -170,6 +170,40 @@ function checkOpenCodeInstalled() {
   }
 }
 
+function getOpenCodeVersion() {
+  try {
+    const output = execSync('opencode --version', { stdio: 'pipe' }).toString().trim();
+    // Extract version number (e.g., "1.1.53" from "opencode 1.1.53")
+    const match = output.match(/(\d+\.\d+\.\d+)/);
+    return match ? match[1] : null;
+  } catch {
+    return null;
+  }
+}
+
+function isOpenCodeVersionCompatible(version) {
+  if (!version) return false;
+  
+  // Parse version components
+  const [major, minor, patch] = version.split('.').map(Number);
+  
+  // Minimum compatible version: 1.0.0
+  if (major < 1) return false;
+  if (major === 1 && minor < 0) return false;
+  
+  // Check for known incompatible versions
+  const incompatibleVersions = [
+    '1.0.0-beta.1',
+    '1.0.0-rc.1'
+  ];
+  
+  if (incompatibleVersions.includes(version)) {
+    return false;
+  }
+  
+  return true;
+}
+
 function testNetworkConnection(url, timeout = 5000) {
   return new Promise((resolve) => {
     const https = require('https');
@@ -515,6 +549,17 @@ Then run this script again.
     console.log(`✅ OpenCode installed successfully, continuing...`);
   } else {
     console.log(`✅ OpenCode is already installed`);
+    
+    // Check version compatibility
+    const version = getOpenCodeVersion();
+    if (version) {
+      console.log(`📦 OpenCode version: ${version}`);
+      
+      if (!isOpenCodeVersionCompatible(version)) {
+        console.log(`⚠️  Warning: OpenCode version ${version} may not be fully compatible`);
+        console.log(`💡 Recommended: Update to latest version from https://opencode.ai`);
+      }
+    }
   }
 
   // Determine installation mode early to use in findSource
