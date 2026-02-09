@@ -1,0 +1,41 @@
+{
+  "name": "my-opencode-tool",
+  "version": "1.0.0",
+  "description": "OpenCode Agent Constitution deployment tool with offline support",
+  "main": "setup-opencode.js",
+  "bin": {
+    "my-opencode": "./setup-opencode.js",
+    "opencode-setup": "./setup-opencode.js",
+    "oad": "./setup-opencode.js"
+  },
+  "scripts": {
+    "start": "node setup-opencode.js",
+    "test": "echo \"No tests yet\" && exit 0",
+    "deploy": "node setup-opencode.js"
+  },
+  "keywords": [
+    "opencode",
+    "agent",
+    "constitution",
+    "deploy",
+    "ai",
+    "development"
+  ],
+  "author": "jabing",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jabing/my-opencode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jabing/my-opencode/issues"
+  },
+  "homepage": "https://github.com/jabing/my-opencode#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {},
+  "optionalDependencies": {
+    "@opencode/cli": "latest"
+  }
+}
