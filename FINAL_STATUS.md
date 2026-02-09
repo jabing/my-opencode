@@ -173,10 +173,15 @@ offline-packages/
 4. **可扩展** - 模块化架构和预留接口
 5. **社区就绪** - 完整的贡献者生态系统
 
-项目现在可以推送到GitHub，用户可以通过简单的npm命令安装使用：
+项目现在可以推送到GitHub和GitCode，用户可以通过简单的npm命令安装使用：
 
 ```bash
+# GitHub安装（国际用户）
 npm install -g https://github.com/jabing/my-opencode.git
+
+# GitCode安装（中国用户）
+npm install -g https://gitcode.com/jabing/my-opencode.git
+
 oad deploy
 ```
 
@@ -187,4 +192,5 @@ oad deploy
 **最后验证**: 2026年2月8日  
 **维护者**: jabing  
 **许可证**: MIT  
-**仓库**: https://github.com/jabing/my-opencode
+**GitHub仓库**: https://github.com/jabing/my-opencode  
+**GitCode仓库**: https://gitcode.com/jabing/my-opencode

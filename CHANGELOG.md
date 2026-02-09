@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - 初始版本发布
 - 支持从GitHub直接安装：`npm install -g https://github.com/jabing/my-opencode.git`
+- 支持从GitCode安装：`npm install -g https://gitcode.com/jabing/my-opencode.git`
 - 提供三个命令别名：`my-opencode`, `opencode-setup`, `oad`
 - 完整的双语文档（英文/中文）
 - 支持部署6角色Agent Constitution
@@ -34,11 +35,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 添加package.json配置，支持npm安装
 - 添加README.md完整双语文档
 - 添加LICENSE文件（MIT许可证）
-- 添加.gitignore文件
+- 添加.gitignore和.npmignore文件
 - 添加测试和验证脚本
 - 完善依赖管理说明
-- 添加自动检测和安装OpenCode的基础架构（计划功能）
-- 添加GitCode镜像支持的基础架构（计划功能）
+- 添加自动检测和安装OpenCode的功能
+- 添加GitCode镜像支持
 
 ### Technical
 - 添加package.json配置
@@ -51,9 +52,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Planned Features
-- OpenCode自动安装功能
-- 网络检测和智能回退
-- GitCode镜像支持
+- ✅ OpenCode自动安装功能
+- ✅ 网络检测和智能回退
+- ✅ GitCode镜像支持
 - 离线安装包管理
 - 更多命令行选项
 - 单元测试和集成测试

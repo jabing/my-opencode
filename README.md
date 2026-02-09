@@ -23,7 +23,7 @@ My OpenCode Tool is a professional deployment utility for setting up OpenCode Ag
 
 ### Installation
 
-#### Method 1: Install from GitHub (Recommended)
+#### Method 1: Install from GitHub (Recommended for international users)
 
 ```bash
 # Install globally
@@ -33,11 +33,24 @@ npm install -g https://github.com/jabing/my-opencode.git
 npm install --save-dev https://github.com/jabing/my-opencode.git
 ```
 
-#### Method 2: Clone and install locally
+#### Method 2: Install from GitCode (Recommended for users in China)
 
 ```bash
-# Clone the repository
+# Install globally
+npm install -g https://gitcode.com/jabing/my-opencode.git
+
+# Or install locally in your project
+npm install --save-dev https://gitcode.com/jabing/my-opencode.git
+```
+
+#### Method 3: Clone and install locally
+
+```bash
+# Clone from GitHub
 git clone https://github.com/jabing/my-opencode.git
+# Or clone from GitCode (faster in China)
+git clone https://gitcode.com/jabing/my-opencode.git
+
 cd my-opencode
 
 # Install globally
@@ -47,11 +60,13 @@ npm install -g .
 node setup-opencode.js
 ```
 
-#### Method 3: Use npx (no installation)
+#### Method 4: Use npx (no installation)
 
 ```bash
 # Run directly without installation
 npx https://raw.githubusercontent.com/jabing/my-opencode/main/setup-opencode.js deploy
+# Or from GitCode
+npx https://gitcode.com/jabing/my-opencode/raw/main/setup-opencode.js deploy
 ```
 
 ### Quick Start
@@ -353,7 +368,7 @@ My OpenCode Tool 是一个专业的部署工具，用于在任何项目中设置
 
 ### 安装方法
 
-#### 方法1：从GitHub安装（推荐）
+#### 方法1：从GitHub安装（国际用户推荐）
 
 ```bash
 # 全局安装
@@ -363,11 +378,24 @@ npm install -g https://github.com/jabing/my-opencode.git
 npm install --save-dev https://github.com/jabing/my-opencode.git
 ```
 
-#### 方法2：克隆并本地安装
+#### 方法2：从GitCode安装（中国用户推荐）
 
 ```bash
-# 克隆仓库
+# 全局安装
+npm install -g https://gitcode.com/jabing/my-opencode.git
+
+# 或在项目中本地安装
+npm install --save-dev https://gitcode.com/jabing/my-opencode.git
+```
+
+#### 方法3：克隆并本地安装
+
+```bash
+# 从GitHub克隆
 git clone https://github.com/jabing/my-opencode.git
+# 或从GitCode克隆（中国用户更快）
+git clone https://gitcode.com/jabing/my-opencode.git
+
 cd my-opencode
 
 # 全局安装
@@ -377,11 +405,13 @@ npm install -g .
 node setup-opencode.js
 ```
 
-#### 方法3：使用npx（无需安装）
+#### 方法4：使用npx（无需安装）
 
 ```bash
 # 直接运行，无需安装
 npx https://raw.githubusercontent.com/jabing/my-opencode/main/setup-opencode.js deploy
+# 或从GitCode
+npx https://gitcode.com/jabing/my-opencode/raw/main/setup-opencode.js deploy
 ```
 
 ### 快速开始

@@ -47,8 +47,10 @@ which my-opencode  # 应该返回空或错误
 用户安装后应该能够运行：
 
 ```bash
-# 安装
+# 安装（GitHub）
 npm install -g https://github.com/jabing/my-opencode.git
+# 或安装（GitCode，中国用户）
+npm install -g https://gitcode.com/jabing/my-opencode.git
 
 # 验证
 oad --help

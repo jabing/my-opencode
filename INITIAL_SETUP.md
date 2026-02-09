@@ -1,4 +1,4 @@
-# GitHub仓库初始设置指南
+# GitHub和GitCode仓库初始设置指南
 
 ## 1. 创建GitHub仓库
 
@@ -10,6 +10,16 @@
    - 不初始化README（我们已经有了）
    - 添加.gitignore: Node.js
    - 许可证: MIT License
+
+## 2. 创建GitCode镜像仓库（中国用户）
+
+1. 访问 https://gitcode.com/new
+2. 填写仓库信息：
+   - 项目名称: `my-opencode`
+   - 项目描述: `OpenCode Agent Constitution部署工具，支持离线安装`
+   - 公开项目
+   - 导入GitHub仓库: `https://github.com/jabing/my-opencode.git`
+   - 选择同步方式：手动或自动同步
 
 ## 2. 本地仓库初始化
 
@@ -33,9 +43,13 @@ git commit -m "Initial release v1.0.0
 
 # 添加远程仓库
 git remote add origin https://github.com/jabing/my-opencode.git
+# 添加GitCode镜像
+git remote add gitcode https://gitcode.com/jabing/my-opencode.git
 
-# 推送代码
+# 推送代码到GitHub
 git push -u origin main
+# 推送代码到GitCode
+git push -u gitcode main
 ```
 
 ## 3. 设置GitHub仓库
@@ -64,6 +78,8 @@ git push -u origin main
 ```bash
 # 测试GitHub安装
 npm install -g https://github.com/jabing/my-opencode.git
+# 测试GitCode安装（中国用户）
+npm install -g https://gitcode.com/jabing/my-opencode.git
 
 # 验证安装
 oad --help
@@ -77,6 +93,8 @@ oad deploy
 ```bash
 # 测试npx安装
 npx https://raw.githubusercontent.com/jabing/my-opencode/main/setup-opencode.js --help
+# 测试GitCode npx
+npx https://gitcode.com/jabing/my-opencode/raw/main/setup-opencode.js --help
 ```
 
 ## 5. 发布管理
@@ -102,10 +120,14 @@ git push origin v1.0.0
    - 完整的双语文档
    - 支持部署6角色Agent Constitution
    
-   ### 安装方式
-   ```bash
-   npm install -g https://github.com/jabing/my-opencode.git
-   ```
+    ### 安装方式
+    ```bash
+    # GitHub（国际用户）
+    npm install -g https://github.com/jabing/my-opencode.git
+    
+    # GitCode（中国用户）
+    npm install -g https://gitcode.com/jabing/my-opencode.git
+    ```
    
    ### 使用
    ```bash
@@ -145,9 +167,9 @@ git push origin v1.0.0
 ## 8. 后续开发计划
 
 ### 短期计划（1-2周）
-1. 实现OpenCode自动安装功能
-2. 添加网络检测和智能回退
-3. 实现GitCode镜像支持
+1. ✅ 实现OpenCode自动安装功能
+2. ✅ 添加网络检测和智能回退
+3. ✅ 实现GitCode镜像支持
 
 ### 中期计划（1个月）
 1. 添加离线安装包管理
@@ -182,8 +204,10 @@ git push --follow-tags
 ## 10. 联系方式
 
 - **GitHub Issues**: https://github.com/jabing/my-opencode/issues
+- **GitCode Issues**: https://gitcode.com/jabing/my-opencode/issues
 - **作者**: jabing
-- **项目主页**: https://github.com/jabing/my-opencode
+- **GitHub项目主页**: https://github.com/jabing/my-opencode
+- **GitCode项目主页**: https://gitcode.com/jabing/my-opencode
 
 ---
 

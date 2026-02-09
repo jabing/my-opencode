@@ -168,6 +168,7 @@ my-opencode/
 ## 联系方式
 
 - **GitHub仓库**: https://github.com/jabing/my-opencode
+- **GitCode仓库**: https://gitcode.com/jabing/my-opencode
 - **Issues**: https://github.com/jabing/my-opencode/issues
 - **维护者**: jabing
 

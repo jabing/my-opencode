@@ -31,8 +31,10 @@
 #### 开发环境设置
 
 ```bash
-# 1. 克隆仓库
+# 1. 克隆仓库（GitHub或GitCode）
 git clone https://github.com/jabing/my-opencode.git
+# 或（中国用户推荐）
+git clone https://gitcode.com/jabing/my-opencode.git
 cd my-opencode
 
 # 2. 安装依赖（目前没有外部依赖）
@@ -77,9 +79,9 @@ cd my-opencode
 ## 开发路线图
 
 ### 高优先级
-- [ ] OpenCode自动安装功能
-- [ ] 网络检测和智能回退
-- [ ] GitCode镜像支持
+- [x] OpenCode自动安装功能
+- [x] 网络检测和智能回退
+- [x] GitCode镜像支持
 
 ### 中优先级
 - [ ] 离线安装包管理

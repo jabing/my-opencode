@@ -27,6 +27,9 @@
     "type": "git",
     "url": "https://github.com/jabing/my-opencode.git"
   },
+  "mirrors": {
+    "gitcode": "https://gitcode.com/jabing/my-opencode.git"
+  },
   "bugs": {
     "url": "https://github.com/jabing/my-opencode/issues"
   },
